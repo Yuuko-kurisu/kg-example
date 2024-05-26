@@ -52,7 +52,8 @@ def main():
 
 
 @main.command("import-to-neo4j")
-@click.option("--url", default="bolt://localhost:7687/")
+# @click.option("--url", default="bolt://localhost:7687/")
+@click.option("--url", default="bolt://neo4j://localhost:7474")
 @click.option("--auth", default="neo4j:myneo4j")
 @click.option("-d", "--data-dir", required=True)
 @click.option("-b", "--batch-size", type=int, default=1000)
